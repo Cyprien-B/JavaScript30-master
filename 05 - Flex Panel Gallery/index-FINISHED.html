@@ -127,11 +127,12 @@
   <script>
     const panels = document.querySelectorAll('.panel');
 
+    // ci dessous la fonction qui ouvre l'image
     function toggleOpen() {
       console.log('Hello');
       this.classList.toggle('open');
     }
-
+    // ci dessous la fonction qui permet de faire apparaitre le texte
     function toggleActive(e) {
       console.log(e.propertyName);
       if (e.propertyName.includes('flex')) {
