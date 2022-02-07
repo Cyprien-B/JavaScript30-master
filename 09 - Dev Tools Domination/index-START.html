@@ -16,30 +16,66 @@
       p.style.color = '#BADA55';
       p.style.fontSize = '50px';
     }
-
+  
+  // dans l'insperteur on peut avec un clic droit => arret activé => modification d'attribut cela entrainera une pause du code a un moment donné
     // Regular
-
+console.log('hello');
     // Interpolated
-
+  console.log('hello i m `${}`')
     // Styled
-
+ console.log('%c super text', 'font-size: 50px' )  // ici on peut modifier la taille de l'ecriture du console.log() attention au ''
     // warning!
+    console.warn('OH Noo')
 
     // Error :|
+    console.error('ZUT')
 
     // Info
+   console.info(" mon crocodile")
+    // Testing     ICI on peut tester des condition et avoir des reponse dans la console
+   console.assert( 1 === 2 , "Uou did not select the right element")
 
-    // Testing
+   const p = document.querySelector('p');
 
+console.assert(p.classList.contains('ouch'), 'That is wrong!');
     // clearing
-
+//console.clear()
     // Viewing DOM Elements
-
+console.log(p);
+console.dir(p)
     // Grouping together
-
+    dogs.forEach(dog => {
+      console.groupCollapsed(`${dog.name}`);
+      console.log(`This is ${dog.name}`);
+      console.log(`${dog.name} is ${dog.age} years old`);
+      console.log(`${dog.name} is ${dog.age * 7} dog years old`);
+      console.groupEnd(`${dog.name}`);
+    });
     // counting
 
+    console.count('Wes');
+    console.count('Wes');
+    console.count('Steve');
+    console.count('Steve');
+    console.count('Wes');
+    console.count('Steve');
+    console.count('Wes');
+    console.count('Steve');
+    console.count('Steve');
+    console.count('Steve');
+    console.count('Steve');
+    console.count('Steve');
+
     // timing
+    console.time('fetching data');
+    fetch('https://api.github.com/users/wesbos')
+      .then(data => data.json())
+      .then(data => {
+        console.timeEnd('fetching data');
+        console.log(data);
+      });
+
+    console.table(dogs);
 
   </script>
 </body>
