@@ -57,7 +57,7 @@
    When a user clicks a checkbox, holds Shift, and then clicks another checkbox a few rows down, all the checkboxes inbetween those two checkboxes should be checked.
 
   -->
-  <div class="inbox">
+  <div class = "inbox" >
     <div class="item">
       <input type="checkbox">
       <p>This is an inbox layout.</p>
@@ -98,11 +98,33 @@
 
 <script>
 /* La logique : IF une checkbox est check
+
 IF shift est selectionner ALORS la prochaine checkbox qui est cliquer lance une fonction checked qui va passer en revue toutes les checkbox si il rencontre une qui est check il check toutes les suivantes 
 si il en rencontre une qui est check encore les suivantes ne bougeront pas
 
-une boucle avec un nth-child devrait pouvoir faire ce que je veux  */
+une boucle devrait pouvoir faire ce que je veux 
 
+la solution utiliser dans le cours et la même mais en mêmorisant la derniere touche check
+*/
+
+
+const checkboxes = document.querySelectorAll('.inbox input[type="checkbox"]');
+
+const memoryElement = false
+let lastChecked ;
+
+function checkAllElementBetween(e){
+ {
+    if (e.shiftKey== true ) {
+      
+
+
+      
+    }
+  };
+   lastChecked = this
+}
+window.addEventListener('keydown',checkAllElementBetween)
 
 </script>
 </body>
