@@ -22,3 +22,4 @@ video.addEventListener('click', togglePlay)
 video.addEventListener('play', updateButton)
 
 toggle.addEventListener('click', togglePlay)
+/
