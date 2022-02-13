@@ -13,13 +13,17 @@ function togglePlay(){
 }
 
 function updateButton() {
-    video.paused ?
-    
+    const icon = this.paused ? '►' : '❚ ❚';
+    toggle.textContent = icon
+}
+
+function skip() {
+    video.currentTime += parseFloat(this.dataset.skip) // ici on extrait les donner du data-skip dans le html de chaque boutton
 }
 
 
 video.addEventListener('click', togglePlay)
 video.addEventListener('play', updateButton)
-
+video.addEventListener('pause', updateButton)
 toggle.addEventListener('click', togglePlay)
-/
+skipButtons.forEach(button => button.addEventListener('click',skip))
